@@ -1,0 +1,13 @@
+<div class="main-container">
+  <div class="form-creation">
+    <app-create-todo (onCreate)="createItem($event)"></app-create-todo>
+  </div>
+
+  <div class="view-container">
+    <div class="task" *ngFor="let item of items">
+      <input type="checkbox" class="isDone" [value]="item.done">
+      <div class="name" [textContent]="item.text"></div>
+      <div class="delete"><i class="fa-regular fa-trash-can" (click)="deleteItem(item.itemId)"></i></div>
+    </div>
+  </div>
+</div>

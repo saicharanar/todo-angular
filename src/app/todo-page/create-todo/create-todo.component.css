@@ -1,0 +1,28 @@
+input[type=text] {
+  padding: 1em;
+  padding-right: 5em;
+  outline-color: var(--heading);
+  box-shadow: 1.5px 1px black;
+  resize: none;
+  margin-bottom: 1.5em;
+}
+
+#btn {
+  box-shadow: 1.5px 1px black;
+  background-color:  #6c8aae;
+  color: #ffffff;
+  border: none;
+  width: 6em;
+  height: 2.1em;
+  font-weight: 600;
+}
+
+#btn:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--button-text);
+  cursor: pointer;
+}
+
+.btn-wrapper {
+  padding-left: 5rem;
+}

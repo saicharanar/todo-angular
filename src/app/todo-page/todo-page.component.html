@@ -1,0 +1,13 @@
+<div class="main-page">
+  <div class="header">
+    <div> TODO-LISTS </div>
+  </div>
+  <div class="content">
+    <div class="list-container">
+      <app-todo-list (onListSelect)="selectList($event)"></app-todo-list>
+    </div>
+    <div class="todo-view-container">
+      <app-todo-view *ngIf="selectedListId" [selectedListId]="selectedListId"></app-todo-view>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="main-container">
+  <div class="form-creation">
+    <app-create-todo (onCreate)="createTodoList($event)"></app-create-todo>
+  </div>
+  <div class="lists-container">
+    <!--    for tasks-->
+    <!--    <div id="1" class="task">-->
+    <!--      <input type="checkbox" class="isDone" onclick="mark(event)">-->
+    <!--      <div class="name">task name</div>-->
+    <!--      <div class="edit"><i class="fa-regular fa-pen-to-square" onclick="editItem(event)"></i></div>-->
+    <!--      <div class="delete"><i class="fa-regular fa-trash-can" onclick="deleteItem(event)"></i></div>-->
+    <!--    </div>-->
+    <div class="todo-list" *ngFor="let todo of todos">
+      <div class="title" [textContent]="todo.title" (click)="viewList(todo.listId)"></div>
+      <div class="delete"><i class="fa-regular fa-trash-can" (click)="deleteTodo(todo.listId)"></i></div>
+    </div>
+  </div>
+</div>
